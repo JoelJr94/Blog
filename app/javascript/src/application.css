@@ -1,0 +1,9 @@
+@import "bootstrap";
+
+a:link, a:visited {
+  text-decoration: none
+}
+
+.text-right{
+  text-align: right;
+}
