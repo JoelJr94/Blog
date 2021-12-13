@@ -6,13 +6,18 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "bootstrap/dist/js/bootstrap.bundle"
+import "bootstrap"
+import { Tooltip } from "bootstrap"
 
 import "../src/application"
 
 Rails.start()
 ActiveStorage.start()
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll("[data-bs-toggle='tooltip']")
+    .forEach((tooltipTriggerEl) => {
+      return new Tooltip(tooltipTriggerEl);
+    });
+});
